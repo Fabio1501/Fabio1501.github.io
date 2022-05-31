@@ -1,0 +1,269 @@
+img{
+   max-width: 100%;
+   height: auto; 
+}
+.topheader {
+    box-shadow: 0 4px 5px var(--color-nav);
+    position: sticky;
+    top: 0;
+    background-color: rgb(124, 114, 124);
+}
+
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1240px;
+
+    padding: 15px;
+    margin: 0 auto;
+}
+
+/*------------ LOGO -------------*/
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-primario);
+}
+
+.logo img {
+    border-radius: 50%;
+    margin-right: 15px;
+    max-width: 250px;
+}
+
+/*------------ MENU --------------*/
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+.menu li {
+    margin: 0 15px;
+    text-transform: uppercase;
+    border: none;
+}
+
+.menu li:hover {
+    line-height: 1.5;
+    border-bottom: 3px solid #65661f;
+}
+
+/*------------ MENU - RESPONSIVE 768px--------------*/
+
+@media(max-width:768px ) {
+    .topnav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo{
+        margin-bottom: 30px;
+    }
+    .menu{
+        flex-direction: column;
+    }
+
+    .menu li{
+        margin-bottom: 15px;
+    }
+}
+
+/*------------ MENU - RESPONSIVE 1024px--------------*/
+
+@media(max-width:1024px ) {
+    .topnav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo{
+        margin-bottom: 30px;
+    }
+    .menu{
+        flex-direction: column;
+    }
+
+    .menu li{
+        margin-bottom: 10px;
+    }
+}
+
+
+
+.slider{
+    width: 100%;
+    height: 100vh;
+    overflow:hidden;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.slider ul{
+    display: flex;
+    animation: cambio 30s infinite alternate linear;
+    width: 400%;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+.slider img{
+    width: 100%;
+    height: 100%;
+}
+
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+/* Dará un efecto de transparencia ya que aparecerá la ventana modal pero el contenido del body se podrá seguir viendo */
+
+.modal-window{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: .8;
+    display: none;
+}
+
+/* Al "clickear" alguna de las imagenes aparecerá la imagen modal con la descripción del articulo y precio */
+
+.modal-window:target{
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor de ventana modal */
+
+.modal-container{
+    height: 50vh;
+    width: 50%;
+    text-align:left;
+    background-color: white;
+    color: black;
+    opacity: 1;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+/* Icono de cerrar ventana modal la cual nos enviará a la imagen que "clickeamos" para abrir la ventana modal |- VER HTML -| */
+
+.cerrar{
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+
+.cerrar:hover{
+    color: red;
+}
+
+/* Contenido de la ventana modal */
+
+.modal-content{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-container div{
+    width: 50%;
+}
+
+.modal-content h3{
+    align-self: flex-start;
+    margin-top: 25px;
+}
+
+.modal-content span{
+    border: 1.3px solid red;
+    width: 100%;
+    margin-top: 7px;
+}
+
+.modal-content p{
+    margin-top: 20px;
+}
+
+/* Botón que nos lleva directamente al chat de whatsapp del proveedor */
+
+.modal-content .button{
+    height: 50px;
+    width: 50%;
+    color: white;
+    background-color: blueviolet;
+    border: 2px solid black;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 15px;
+    margin: auto auto;
+    font-weight: 600;
+}
+
+.modal-content .button:hover{
+    height: 65px;
+    width: 60%;
+    padding-top: 22px;
+    transition: .2s;
+    background-color: rgba(206, 202, 202, 0.753);
+    color: blueviolet;
+    font-weight: 900;
+}
+
+/* Imagen de producto a vender */
+
+.modal-container div img{
+    width: 90%;
+    height: 90%;
+    margin: 15px 10px 0 20px;
+}
+
+
+
+.modal-container-2{
+    margin-top: 50px;
+    width: 90%;
+    height: 50vh;
+
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+
